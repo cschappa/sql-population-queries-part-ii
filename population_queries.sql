@@ -44,12 +44,10 @@ WHERE countries.name = 'Poland';
 
 
 -- How many countries have the word "The" in their name?
--- A: 33
+-- A: 2
 SELECT COUNT(*)
 FROM countries
-JOIN population_years
-  ON countries.id = population_years.country_id
-WHERE countries.name LIKE '%The%';
+WHERE name LIKE '% The%';
 
 
 -- What was the total population of each continent in 2010?
